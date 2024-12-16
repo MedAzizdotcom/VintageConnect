@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import Web3 from 'web3';
 import logo from '../logo.png';
 import './App.css';
 
 class App extends Component {
+  async componenetWillMount(){
+    await this.loadWeb3()
+
+  }
   render() {
     return (
       <div>
@@ -13,7 +18,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Dapp University
+            Vintage Market 
           </a>
         </nav>
         <div className="container-fluid mt-5">
@@ -27,7 +32,7 @@ class App extends Component {
                 >
                   <img src={logo} className="App-logo" alt="logo" />
                 </a>
-                <h1>Dapp University Starter Kit</h1>
+                <h1>Vintage Market App</h1>
                 <p>
                   Edit <code>src/components/App.js</code> and save to reload.
                 </p>
